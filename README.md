@@ -86,3 +86,7 @@ src/
 ## License
 
 This project's code is licensed under the [MIT License](LICENSE).
+
+## A note on the commit history
+
+This repository was published in 2026 as a curated reference of work originally designed and prototyped between Jul 2023 - Nov 2023. The technology stack reflects the versions available during that development window and has been intentionally preserved for historical accuracy.
