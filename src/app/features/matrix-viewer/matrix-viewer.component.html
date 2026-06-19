@@ -1,0 +1,21 @@
+<div class="matrix-viewer">
+  <app-head-selector></app-head-selector>
+
+  <div class="viewer-body">
+    <div class="info-panel" *ngIf="selectedHeadInfo() as info">
+      <h2>Attention Head</h2>
+      <div class="badges">
+        <span class="badge">Layer {{ info.layer }}</span>
+        <span class="badge">Head {{ info.head }}</span>
+        <span class="badge type">{{ selectedMatrix()?.type | titlecase }}</span>
+      </div>
+    </div>
+
+    <div class="matrix-stage">
+      <svg
+        [appMatrixRenderer]="selectedMatrix()?.matrix ?? []"
+        [tokens]="selectedMatrix()?.tokens ?? []">
+      </svg>
+    </div>
+  </div>
+</div>

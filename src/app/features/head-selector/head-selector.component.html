@@ -1,0 +1,22 @@
+<div class="head-selector">
+  <div class="control-group">
+    <label for="layer-select">Layer</label>
+    <select id="layer-select" [(ngModel)]="selectedLayer" (ngModelChange)="onChange()">
+      <option *ngFor="let layer of layers()" [ngValue]="layer">{{ layer }}</option>
+    </select>
+  </div>
+
+  <div class="control-group">
+    <label for="head-select">Head</label>
+    <select id="head-select" [(ngModel)]="selectedHead" (ngModelChange)="onChange()">
+      <option *ngFor="let head of heads()" [ngValue]="head">{{ head }}</option>
+    </select>
+  </div>
+
+  <div class="control-group">
+    <label for="type-select">Type</label>
+    <select id="type-select" [(ngModel)]="selectedType" (ngModelChange)="onChange()">
+      <option *ngFor="let type of types" [ngValue]="type.value">{{ type.label }}</option>
+    </select>
+  </div>
+</div>

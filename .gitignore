@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Snowpack dependency
+web_modules/
+
+# Compiled binary addons
+build/Release/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Environment files (do not commit your secrets!)
+.env
+.env.*
+!.env.example
+
+# Linter cache
+.eslintcache
+.stylelintcache
+
+# npm registry & Node history
+.npm
+.node_repl_history
+
+# Packed output
+*.tgz
+
+# Integrity files
+.yarn-integrity
+
+# Angular build output
+/dist
+dist/
+
+# Angular cache
+.angular
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
