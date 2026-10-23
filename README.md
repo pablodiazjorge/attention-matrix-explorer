@@ -12,14 +12,13 @@ This project is an interactive explorer for transformer **attention matrices**. 
 
 The work is inspired by the seminal paper **"Attention Is All You Need"**, published in 2017 by researchers at **Google Brain** and **Google Research** (Vaswani et al.). This paper revolutionized artificial intelligence by introducing the **Transformer architecture**, which replaced recurrence and convolutions with the **self-attention mechanism**. Self-attention allows a model to weigh the importance of different positions in a sequence when encoding each token, enabling unprecedented parallelization and long-range dependency modeling.
 
-This application was built as a learning and portfolio project to demonstrate how attention weights can be rendered in real time using Angular 16 and D3.js, while keeping the computation of matrix operations (such as softmax, transpose and matrix multiplication) on a dedicated Web Worker.
+This application was built as a learning and portfolio project to demonstrate how attention matrices can be rendered in real time using Angular 16 and D3.js.
 
 ## Features
 
 - Standalone Angular 16 components (no NgModules).
 - Reactive state with Angular 16 Signals (`signal`, `computed`) — Developer Preview.
 - D3.js heatmap rendering with Viridis color scale, token axes and hover tooltips.
-- Web Worker off-load for matrix computations (softmax, transpose, multiply).
 - Clean architecture: `core` (models, services, utils) and `features` (viewer, selector).
 
 ## Prerequisites
@@ -68,7 +67,7 @@ src/
 │   │   ├── models/          # AttentionMatrix, AttentionHead
 │   │   ├── services/        # AttentionDataService, MatrixComputationService
 │   │   ├── utils/           # D3 color scales
-│   │   └── workers/         # Web Worker for matrix math
+│   │   └── workers/         # Web Worker for matrix math (not wired in)
 │   ├── features/
 │   │   ├── matrix-viewer/   # Main viewer + D3 directive
 │   │   └── head-selector/   # Layer / head / type controls
