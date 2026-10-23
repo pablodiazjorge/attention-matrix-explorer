@@ -1,5 +1,7 @@
 # Attention Matrix Explorer (Jul 2023 - Nov 2023)
 
+> **Snapshot (2023).** Published in 2026, keeping the stack of the time; not maintained. Limitations: the sample data is synthetic and is not attention weights (no row sums to 1), and the Web Worker is never injected or used. See [Limitations](#limitations).
+
 Interactive client-side visualization of transformer attention matrices (Query, Key, Value).
 
 Built with **Angular 16.2.12**, **D3.js 7.8.5**, **RxJS 7.8.1**, **TypeScript 5.1.6** and **Node.js 18.18.0**.
@@ -82,6 +84,12 @@ src/
 
 - The application is built with Angular 16's **Developer Preview** of Signals, which are used as the reactive state primitive for the loaded matrices and the current selection.
 - The template syntax relies on the structural directives available in Angular 16 (`*ngIf`, `*ngFor`).
+
+## Limitations
+
+- **The sample data is synthetic.** `src/assets/sample-data/attention-sample.json` holds made-up values in [0, 1] labelled Query, Key and Value. They are not weights taken from a real model and no row sums to 1 (the sums go from about 2.2 to 7.7), so the heatmaps show how the viewer renders a matrix, not how a transformer attends.
+- **The Web Worker is not used.** `MatrixComputationService` and its worker script exist, but nothing injects the service, so no softmax, transpose or multiplication runs: the viewer draws the matrices as loaded.
+- **There are no tests.** `ng test` is configured, but the project has no spec files.
 
 ## License
 
